@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.jsibbold.zoomage.ZoomageView
+        android:id="@+id/zoomImg"
+        android:layout_width="399dp"
+        android:layout_height="640dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/rv"
+        app:layout_constraintEnd_toEndOf="@+id/rv"
+        app:layout_constraintStart_toStartOf="@+id/rv"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:zoomage_animateOnReset="true"
+        app:zoomage_autoCenter="true"
+        app:zoomage_autoResetMode="UNDER"
+        app:zoomage_maxScale="20"
+        app:zoomage_minScale="0.6"
+        app:zoomage_restrictBounds="true"
+        app:zoomage_translatable="true"
+        app:zoomage_zoomable="true" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="376dp"
+        android:layout_height="39dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/zoomImg"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/zoomImg"
+        app:layout_constraintTop_toTopOf="@+id/zoomImg" />
+
+    <TextView
+        android:id="@+id/tvPath"
+        android:layout_width="376dp"
+        android:layout_height="39dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/zoomImg"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/zoomImg"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvSize"
+        android:layout_width="376dp"
+        android:layout_height="39dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/zoomImg"
+        app:layout_constraintStart_toStartOf="@+id/zoomImg"
+        app:layout_constraintTop_toBottomOf="@+id/tvPath" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="376dp"
+        android:layout_height="39dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/zoomImg"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/zoomImg"
+        app:layout_constraintTop_toBottomOf="@+id/tvSize" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
